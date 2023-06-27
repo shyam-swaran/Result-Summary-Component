@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: myfont;
+      src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    }
+    body{
+      /* border: 5px solid gray; */
+      height: 96vh;
+      font-family:myfont;
+    }
+    .main{
+      display: flex;
+      box-shadow: 5px 25px 40px rgba(0,0,0,0.2);
+      /* border: 5px solid gray; */
+      margin: auto;
+      margin-top: 100px;
+      max-width: 600px;
+      min-height: 400px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+    }
+    .result{
+      /* border: 5px solid gray; */
+      height: 410px;
+      background-image:linear-gradient(0deg, rgb(50,43,234), rgb(101,66,255));
+      width: 300px;
+      color: white;
+      font-weight: bolder;
+      padding-top: 20px;
+      text-align: center;
+      border-radius: 20px;
+    }
+    .summary{
+      /* border: 5px solid gray; */
+      width: 300px;
+      height: 400px;
+      padding-top: 12px;
+      padding-left: 20px;
+
+    }
+    .percentage{
+      /* border: 5px solid gray; */
+      border-radius: 100px;
+      background-image:linear-gradient(0deg, rgba(70,51,237,255),rgba(76,34,204,255));
+
+      width: 160px;
+      height: 120px;
+      padding-top: 40px;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .percentage_value{
+      font-size: 50px;
+    }
+    p{
+      /* border: 5px solid gray; */
+      margin: auto;
+      width: 220px;
+    }
+    .btn{
+      margin-top: 25px;
+      border: none;
+      background-color:  rgb(8, 3, 44);
+      color: white;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 20px;
+      padding-right: 35%;
+      padding-left: 35%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      transition: 1s;
+    }
+    .btn:hover{
+      background-color:  rgb(81,57,245);
+    }
+    .scores{
+      /* border: 5px solid gray; */
+      padding: 15px;
+      margin-right: 30px ;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    img{
+      float: left;
+      padding-top: 2px;
+      width: 15px;
+    }
+    .scoretext{
+      /* border: 5px solid gray; */
+      width: 33.33%;
+      float:inherit;
+      padding-left: 25px;
+    }
+    .score_vals{
+      display: flex;
+      width: 33.33%;
+      text-align: right;
+      /* border: 5px solid gray; */
+      float: right;
+    }
+    .scorescored{
+      font-weight: bolder;
+    }
+    .totalscore{
+      opacity: 0.5;
+      text-align: left;
+      padding-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="result">
+      <h2 style="opacity: 0.7;">Your Result</h2>
+      <div class="percentage">
+        <div class="percentage_value">
+          76
+        </div>
+        <div  style="opacity: 0.5;" class="percentage_total">
+          of 100
+        </div>
+      </div>
+      <h1 style="margin-top: 20px;">Great</h1>
+        <p style="opacity: 0.5;">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <div class="summary">
+      <h2>Summary</h2>
+      <div style="background-color:rgba(248, 9, 9, 0.1);" class="scores">
+        <div class="single_score">
+          <div class="score_vals">
+            <div class="scorescored">80</div>
+            <div class="totalscore"> / 100</div>
+          </div>
+          <img src="assets/images/icon-reaction.svg" alt="">
+          <div style="color: rgba(248, 9, 9, 1);" class="scoretext">Reaction</div>
+        </div>
+      </div>
+      <div style="background-color:rgba(232, 195, 10, 0.1);" class="scores">
+        <div class="single_score">
+          <div class="score_vals">
+            <div class="scorescored">98</div>
+            <div class="totalscore"> / 100</div>
+          </div>
+          <img src="assets/images/icon-memory.svg" alt="">
+          <div style="color: rgba(232, 195, 10, 1);" class="scoretext">Memory</div>
+        </div>
+      </div>
+      <div style="background-color:rgba(9, 248, 113, 0.1);"class="scores">
+        <div class="single_score">
+          <div class="score_vals">
+            <div class="scorescored">61</div>
+            <div class="totalscore"> / 100</div>
+          </div>
+          <img src="assets/images/icon-verbal.svg" alt="">
+          <div style="color: rgba(9, 248, 113, 1);"class="scoretext">Verbal</div>
+        </div>
+      </div>
+      <div style="background-color:rgba(61, 9, 248, 0.1);" class="scores">
+        <div class="single_score">
+          <div class="score_vals">
+            <div class="scorescored">72</div>
+            <div class="totalscore"> / 100</div>
+          </div>
+          <img src="assets/images/icon-visual.svg" alt="">
+          <div style="color: rgba(61, 9, 248, 1);" class="scoretext">Visual</div>
+        </div>
+      </div>
+      <button class="btn">Continue</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Shyam swaran</a>.
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- <div class="main">
+  <div class="result">
+    <h2 class="result-header">Your Result</h2>
+    <div clas="percentage">
+      <h3 class="percentage-value">76</h3>
+      <p class="percentage-total">of 100</p>
+    </div>
+    <h2>Great</h2>
+    <p>You scored higher than 65% of the people who have taken these tests.</p>
+  </div>
+  <div class="summary">
+    <h2>Summary</h2>
+    <div class="type">
+      <div class="typename">
+        Reaction
+      </div>
+      <div class="type-pecentage">
+        80 
+      </div>
+      <div class="type-total">
+        / 100
+      </div>
+    </div>
+    <div class="type">
+      <div class="typename">
+        Memory
+      </div>
+      <div class="type-pecentage">
+        92 
+      </div>
+      <div class="type-total">
+        / 100
+      </div>
+    </div>
+    <div class="type">
+      <div class="typename">
+        Visual
+      </div>
+      <div class="type-pecentage">
+        72 
+      </div>
+      <div class="type-total">
+        / 100
+      </div>
+    </div>
+    <div class="type">
+      <div class="typename">
+        Verbal
+      </div>
+      <div class="type-pecentage">
+        61 
+      </div>
+      <div class="type-total">
+        / 100
+      </div>
+    </div>
+  
+  
+
+  
+  
+
+  
+  
+
+  Continue -->
